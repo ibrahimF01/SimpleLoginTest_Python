@@ -22,12 +22,13 @@ def loginTest(userName, password, posOrNeg):
         dashboardVerify = driver.find_element(By.CSS_SELECTOR, "div[class='ng-star-inserted']>span").text
         return dashboardVerify
 
-
+# Negative login test:
 if "Invalid username or password" in loginTest("richfield.edu", "ibrahimF", "negative"):
     print("Negatif login test başarılı")
 else:
     print("Negatif test başarısız")
 
+#Pozitif login test:
 if "Dashboard" in loginTest("richfield.edu", "Richfield2020!", "positive"):
     print("Pozitif login test başarılı")
 else:
